@@ -1,4 +1,4 @@
-# Joan David Martínez Hernández - 160004716
+# STEVE ALEXANDER PINEDA RINCON - 160004716
 
 Sistema distribuido que simula el proceso de minería en una blockchain utilizando arquitectura cliente-servidor.
 
