@@ -1,8 +1,8 @@
-# STEVE ALEXANDER PINED RINCON - 160004726
+# STEVE ALEXANDER PINEDA RINCON - 160004726
 
 ##  Requisitos del sistema 
 
-- **Sistema Operativo**: Linux (Ubuntu, Debian, Fedora, Arch, etc.)
+- **Sistema Operativo**: Linux (Ubuntu, Debian,etc.)
 - **Compilador**: GCC
 - **Terminal**: Bash
 
@@ -53,17 +53,17 @@ chmod +x compilar.sh
 Deberías tener estos archivos:
 
 ```
-servidor
+server
 worker
 ```
 
 Verificar permisos:
 
 ```bash
-ls -lh servidor worker
+ls -lh server worker
 
 # Deberías ver algo como:
-# -rwxr-xr-x  1 user user  servidor
+# -rwxr-xr-x  1 user user  servr
 # -rwxr-xr-x  1 user user  worker
 ```
 
@@ -83,7 +83,7 @@ El simulador necesita:
 cd ~/BLOCK_CHAIN
 
 # Ejecutar servidor
-./servidor
+./server
 ```
 
 ### Paso 2: Configurar Parámetros
@@ -165,7 +165,6 @@ Total de combinaciones a probar: 1922
 
 Iniciando busqueda...
 
-Progreso: 52.08% - Intentos: 10000 - Ultimo hash: 3a5f2e12
 ```
 
 #### Terminal 3 - Worker 2
@@ -192,25 +191,43 @@ Cuando un worker encuentre la solución:
 
 ```
 *** SOLUCION ENCONTRADA! ***
-Nonce: 2456
-Combinacion: Az
-Texto completo: Mineria distribuida TCP pruebaAz
-Hash: 3a5f2e0
+Nonce: 6
+Combinacion: 06
+Texto completo: Mineria distribuida TCP prueba06
+Hash: 59763bb0604ec3d0
+Tiempo de ejecucion: 0 segundos
 
 [SERVIDOR] Orden de detencion recibida (otro worker encontro la solucion)
 ```
+ o tambien:
+
+```
+*** SOLUCION ENCONTRADA! ***
+Nonce: 1943
+Combinacion: VL
+Texto completo: Mineria distribuida TCP pruebaVL
+Hash: 801a8db1073b7620
+Tiempo de ejecucion: 0 segundos
+
+Worker finalizado.
+```
+
 
 En el servidor:
 
 ```
-*** Worker 2 encontro la solucion! ***
-Hash: 3a5f2e0
-Nonce: 2456
+*** Worker 1 encontro la solucion! ***
+Hash: 59763bb0604ec3d0
+Nonce: 6
+Worker 2 conectado desde 127.0.0.1:44196
+
+Todos los workers conectados. Iniciando busqueda...
+
 
 === RESULTADO FINAL ===
 SOLUCION ENCONTRADA!
-Hash: 3a5f2e0
-Nonce: 2456
+Hash: 801a8db1073b7620
+Nonce: 1943
 ```
 
 ### Monitorear Uso de CPU
